@@ -24,47 +24,14 @@ def initialize(choice):
     if choice.upper() == 'Q':
         sys.exit()
     elif choice.upper() == '1':
-        # get_credentials()
+        get_credentials()
         get_expired_OINs() 
         download_certs()
     elif choice.upper() == '2':
-        # get_credentials()
+        get_credentials()
         get_selected_OINs()
         download_certs()
     else:
         print("You've chosen unavailable option! Exiting...")
-        sys.exit()
-
-
-
-
-
-if __name__ == '__main__':
-
-    parser = argparse.ArgumentParser(
-                        description='WELCOME TO THE OASIS WEB SCRAPER!')
-                                    
-    parser.add_argument(
-        '-q', '--quit', 
-        type=str, 
-        help='To quit the program'
-        )    
-    parser.add_argument(
-        '-x', 
-        type=str, 
-        help='To check for expired AS certificates'
-        )     
-    parser.add_argument(
-        '-z', 
-        type=str, 
-        help='To check AS certificates as needed'
-        ) 
-    args = parser.parse_args() 
-    # print(args)
-    initialize(args)
-          
+        sys.exit() 
         
-
-
-
-
