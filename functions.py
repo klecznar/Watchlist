@@ -187,9 +187,9 @@ def log_in(driver):
     # LOG IN
     userID = driver.find_element(By.ID, "txtUser")
     userID.click()
-    userID.send_keys('watchlist@pattonair.com')
+    userID.send_keys(login)
     password = driver.find_element(By.ID, "txtPassword")
-    password.send_keys('Pattonair0321')
+    password.send_keys(passcode)
     password.send_keys(Keys.ENTER)
     time.sleep(1)
     
